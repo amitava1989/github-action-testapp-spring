@@ -14,4 +14,10 @@ public class HomeController {
         Joiner joiner = Joiner.on(" ").skipNulls(); 
         return joiner.join("Hello", null, "from", "Spring", "Boot");
     }
+    
+    @GetMapping("/student")
+	public Student getStudent() {
+		
+		return new Student("Amitava","Ghosh");
+	}
 }
